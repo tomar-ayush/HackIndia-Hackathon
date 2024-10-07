@@ -32,12 +32,12 @@ const Hero = () => {
                       name="Email"
                       placeholder="Enter Token"
                       autocomplete="off"
-                      class="h-12 max-w-[250px] px-4 text-white text-sm border border-[#5e4dcd] bg-transparent rounded-l-md focus:outline-none focus:border-[#3898EC]"
+                      class="h-12 max-w-[250px] px-4 text-white text-sm border border-[#1d4ed8] bg-transparent rounded-l-md focus:outline-none focus:border-[#3898EC]"
                     />
                     <input
                       type="submit"
                       value="Verify"
-                      class="h-12 px-4 bg-[#5e4dcd] text-white text-sm cursor-pointer rounded-r-md transition duration-300 ease-in-out hover:bg-[#5e5dcd]"
+                      class="h-12 px-4 bg-[#1d4ed8] text-white text-sm cursor-pointer rounded-r-md transition duration-300 ease-in-out hover:bg-[#5e5dcd]"
                     />
                   </div>
                 </div>
