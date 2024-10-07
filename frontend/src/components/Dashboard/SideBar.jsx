@@ -80,11 +80,12 @@ const SideBar = () => {
                     <img src={open ? logo1 : logo2} className={`cursor-pointer w-56 duration-500 ${open && 'rotate-[360deg]'}`} alt="Logo" />
                 </div>
                 <ul className="pt-6">
-
+                <Link to={'/dashboard'}>
                     <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-lg items-center gap-x-4 mt-2 ${open && 'bg-light-white'}`}>
                         <TbLayoutDashboard style={{ width: '30px', height: '30px' }} />
                         <span className={`${!open && 'hidden'} origin-left duration-200`}>Dashboard</span>
                     </li>
+                </Link>
                     <Link to={'/newdoc'}>
                     <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-lg items-center gap-x-4 mt-9`}>
                         <TbFileTypeDocx style={{ width: '30px', height: '30px' }} />
@@ -105,7 +106,7 @@ const SideBar = () => {
                 </ul>
             </div>
             <div >
-                <Link to='/profile'>
+                
                     <div className={`absolute bottom-5 pl-5 flex items-center space-x-4 text-white`} >
 
                         <img className="w-12 h-12 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
@@ -122,7 +123,6 @@ const SideBar = () => {
 
                         </div>
                     </div>
-                </Link>
             </div>
         </div>
     );
