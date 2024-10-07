@@ -68,7 +68,7 @@ const SideBar = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    if (['/'].includes(location.pathname)) return null;
+    if (['/otp', '/', '/login', '/signup'].includes(location.pathname)) return null;
 
     return (
         <div>

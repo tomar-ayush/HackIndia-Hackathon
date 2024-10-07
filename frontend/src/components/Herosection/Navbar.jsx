@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+
+=======
 import logo1 from '../../Assets/logo-no-background.png';
+>>>>>>> 3c0f2e38e618176152917a77c81bcddac5d92271
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
@@ -10,13 +15,19 @@ const Navbar = () => {
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-5 rtl:space-x-reverse">
-          <button type="button" className="text-white border-blue-700 border-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-    Sign Up
-          </button>
+          <Link to={'/otp'}>
 
-          <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Login
-          </button>
+            <button type="button" className="text-white border-blue-700 border-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Sign Up
+            </button>
+          </Link>
+
+          <Link to={'/login'}>
+
+            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Login
+            </button>
+          </Link>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
