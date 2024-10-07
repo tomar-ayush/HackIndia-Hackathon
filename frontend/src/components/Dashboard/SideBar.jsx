@@ -11,46 +11,46 @@ import logo2 from '../../Assets/small-logo.png';
 
 import logo1 from '../../Assets/logo-no-background.png';
 
-// import axios from 'axios';
+import axios from 'axios';
 
 const SideBar = () => {
     const [open, setOpen] = useState(true);
   const location = useLocation();
 
     //   const location = useLocation();
-    //   const [email, setEmail] = useState('');
-    //   const [name, setName] = useState('');
+      const [email, setEmail] = useState('');
+      const [name, setName] = useState('');
 
 
-    //   const fetchUserData = async () => {
-    //       try {
-    //           const response = await axios.get('http://localhost:3000/api/auth/profile', {
-    //               withCredentials: true 
-    //           });
-    //           console.log('API response:', response.data); // Debugging: log the full response
-    //           if (response.data && response.data.user.email) {
-    //               await setEmail(response.data.user.email);
-    //               await setName(response.data.user.name);
-    //           } else {
-    //               console.error('Error fetching user data:', response.data.message);
-    //           }
-    //       } catch (error) {
-    //           console.error('Error fetching user data:', error);
-    //       }
-    //   };
-    //   fetchUserData();
+      const fetchUserData = async () => {
+          try {
+              const response = await axios.get('http://localhost:3000/api/auth/profile', {
+                  withCredentials: true 
+              });
+              console.log('API response:', response.data); // Debugging: log the full response
+              if (response.data && response.data.user.email) {
+                  await setEmail(response.data.user.email);
+                  await setName(response.data.user.name);
+              } else {
+                  console.error('Error fetching user data:', response.data.message);
+              }
+          } catch (error) {
+              console.error('Error fetching user data:', error);
+          }
+      };
+      fetchUserData();
 
 
-    //   const handleLogout = async () => {
-    //     try {
-    //         const response = await axios.get('http://localhost:3000/api/auth/logout', { withCredentials: true });
-    //         console.log(response.data.message); 
-    //         window.location.href = '/login'; 
+      const handleLogout = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/api/auth/logout', { withCredentials: true });
+            console.log(response.data.message); 
+            window.location.href = '/login'; 
 
-    //     } catch (error) {
-    //         console.error('Error logging out:', error);
-    //     }
-    // };
+        } catch (error) {
+            console.error('Error logging out:', error);
+        }
+    };
 
 
     useEffect(() => {
@@ -112,13 +112,13 @@ const SideBar = () => {
                         <img className="w-12 h-12 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
                         <div>
                             <div className={`font-medium ${!open ? 'hidden' : 'block'} origin-left duration-200`}>
-                                Name
-                                {/* {name ? name : 'No name Found'} */}
+                                
+                                {name ? name : 'No name Found'}
                             </div>
                             <div
                                 className={`font-medium ${!open ? 'hidden' : 'block'} origin-left text-gray-600 duration-200 truncate w-[230px]`}
-                            >No Email Found
-                                {/* {email ? email : 'No Email Found'} */}
+                            >
+                                {email ? email : 'No Email Found'}
                             </div>
 
                         </div>
