@@ -1,50 +1,108 @@
-import React from 'react'
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
+// import axios from 'axios';
+// import { Link, useNavigate } from 'react-router-dom';
+
+function NewDoc() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [otp, setOtp] = useState('');
+  const [message, setMessage] = useState('');
+  // const [loading, setLoading] = useState(false);
+  // const navigate = useNavigate();
+
+  // const handleSignup = async () => {
+
+  //     try {
+  //         setLoading(true);
+  //         const response = await axios.post('http://localhost:3000/api/auth/signup', { name, email, password, role, otp });
+  //         setMessage(response.data.message);
+  //         setTimeout(() => {
+  //             setLoading(false);
+  //             navigate('/login');
+  //         }, 2000);
+
+  //     } catch (error) {
+  //         if (error.response && error.response.data && error.response.data.message) {
+  //             setMessage(error.response.data.message);
+  //         } else {
+  //             setMessage("Error Signing Up");
+  //         }
+  //         setLoading(false);
+  //         console.error(error);
+  //     }
+  // };
+  const messageColor = message === "User created successfully" ? 'green' : 'red';
+  return (
+    <div className='bg-black '>
+      <div className="text-center pt-4 ">
+
+        <h2 className="text-4xl py-4 tracking-tight text-white">
+          Upload Document
+        </h2>
+
+      </div>
+      <div className="flex justify-center my-2 mx-4 md:mx-0 ">
+        <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-neutral-900">
+          <div className="flex flex-wrap -mx-3 mb-6 ">
+            <div className="w-full flex md:w-full px-3 mb-6 gap-10">
+              <div className='w-1/2'>
+                <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Email'>Name</label>
+                <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                  required />
+              </div>
+              <div className='w-1/2'>
+                <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Profession'>Profession</label>
+                <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                  type="text"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  placeholder="Enter Profession"
+                  required />
+              </div>
+            </div>
+            <div className="w-full md:w-full px-3 mb-6">
+              <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='document name'>document name</label>
+              <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your document name"
+                required />
+            </div>
+
+            <div className="w-full md:w-full px-3 mb-6">
+              <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='description'>description</label>
+              <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your Description"
+                required />
+            </div>
+
+            <div className="w-full md:w-full px-3 mb-6">
+              <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='description'>Upload document</label>
+              <input  className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"  type="file" name="" id="" />
+            </div>
+
+            <div className="w-full md:w-full px-3  ">
+              <button type='submit' className="block w-full bg-green text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none ">Upload Doc</button>
+            </div>
+            <div className='pt-8 mx-auto font-thin text-xl -mb-5'>
+              {message && <p style={{ color: messageColor }} >{message}</p>}
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-export default function NewDoc() {
-  const { register, handleSubmit, errors } = useForm();
-
-	const onSubmit = (data) => {
-		console.log(data);
-	};
-
-	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			<div className="mb-4">
-				<label className="block text-gray-700 font-medium mb-2" htmlFor="name">
-					Name
-				</label>
-				<input
-					className="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
-					id="name"
-					type="text"
-					name="name"
-					placeholder="John Doe"
-					ref={register({ required: true })}
-				/>
-				{errors.name && <p className="text-red-500 text-xs italic">Name is required</p>}
-			</div>
-			<div className="mb-4">
-				<label className="block text-gray-700 font-medium mb-2" htmlFor="email">
-					Email
-				</label>
-				<input
-					className="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
-					id="email"
-					type="email"
-					name="email"
-					placeholder="johndoe@example.com"
-					ref={register({ required: true })}
-				/>
-				{errors.email && <p className="text-red-500 text-xs italic">Email is required</p>}
-			</div>
-			<button
-				className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-				type="submit"
-			>
-				Submit
-			</button>
-		</form>
-	);
+    </div>
+  );
 }
+
+export default NewDoc;
