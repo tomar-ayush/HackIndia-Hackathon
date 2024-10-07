@@ -6,7 +6,7 @@ const Header = () => {
 //   const { enableWeb3 } = useMoralis();
   const location = useLocation();
 
-  if (["/"].includes(location.pathname)) return null;
+  if (['/otp', '/', '/login', '/signup'].includes(location.pathname)) return null;
 
   return (
     <>

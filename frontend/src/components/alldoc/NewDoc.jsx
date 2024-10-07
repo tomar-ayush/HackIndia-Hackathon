@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 
 function NewDoc() {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [otp, setOtp] = useState('');
+  const [docname, setDocname] = useState('');
+  const [description, setDescription] = useState('');
+  const [professionals, setProfession] = useState('');
   const [message, setMessage] = useState('');
+
+  
   // const [loading, setLoading] = useState(false);
   // const navigate = useNavigate();
 
@@ -59,8 +61,8 @@ function NewDoc() {
                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Profession'>Profession</label>
                 <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                   type="text"
-                  value={otp}
-                  onChange={(e) => setOtp(e.target.value)}
+                  value={professionals}
+                  onChange={(e) => setProfession(e.target.value)}
                   placeholder="Enter Profession"
                   required />
               </div>
@@ -69,8 +71,8 @@ function NewDoc() {
               <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='document name'>document name</label>
               <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={docname}
+                onChange={(e) => setDocname(e.target.value)}
                 placeholder="Enter your document name"
                 required />
             </div>
@@ -79,8 +81,8 @@ function NewDoc() {
               <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='description'>description</label>
               <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 placeholder="Enter your Description"
                 required />
             </div>
