@@ -49,7 +49,7 @@ function Otp() {
 
             </div>
             <div className="flex justify-center my-2 mx-4 md:mx-0  ">
-                <div className="w-full max-w-md rounded-xl shadow-md p-6 bg-gray-700 border-4 border-black">
+                <div className="w-full max-w-md rounded-xl shadow-md p-6 bg-gray-800 border-4 border-black">
                     <div className="flex flex-wrap -mx-3 mb-6 ">
 
                         <div className="w-full md:w-full px-3 mb-6">
@@ -71,7 +71,7 @@ function Otp() {
                            
                         </div>
                         <div className="w-full md:w-full px-3">
-                            <button onClick={handleSendOtp} type='submit' className="block w-full bg-green text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none ">{loading ? 'wait...' : 'Send OTP'}</button>
+                            <button onClick={handleSendOtp} type='submit' className="block w-full bg-blue-800 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none ">{loading ? 'wait...' : 'Send OTP'}</button>
                         </div>
                         <div className='pt-8 mx-auto font-thin text-xl -mb-5'>
                             {message && <p style={{ color: messageColor }} >{message}</p>}

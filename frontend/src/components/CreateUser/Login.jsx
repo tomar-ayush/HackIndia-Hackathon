@@ -18,7 +18,7 @@ function Login() {
 
             setTimeout(() => {
                 setLoading(false);
-                navigate('/home');
+                navigate('/dashboard');
             }, 1000);
 
         } catch (error) {
@@ -37,7 +37,7 @@ function Login() {
 
     return (
         <div>
-            <div className='bg-black min-h-screen'>
+            <div className=' min-h-screen'>
                 <div className="text-center pt-20">
                     <div className="flex items-center justify-center">
                         <svg fill="none" viewBox="0 0 24 24" className="w-12 h-12 text-blue-500" stroke="currentColor">
@@ -49,12 +49,12 @@ function Login() {
                     </h2>
                 </div>
                 <div className="flex justify-center my-2 mx-4 md:mx-0">
-                    <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-neutral-900">
+                    <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-gray-800">
                         <form onSubmit={handleLogin} className="flex flex-wrap -mx-3 mb-6">
                             <div className="w-full md:w-full px-3 mb-6">
                                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Email'>Email address</label>
                                 <input
-                                    className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                                    className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +65,7 @@ function Login() {
                             <div className="w-full md:w-full px-3 mb-6">
                                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Password'>Password</label>
                                 <input
-                                    className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                                    className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                     type="password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
@@ -84,7 +84,7 @@ function Login() {
                             <div className="w-full md:w-full px-3">
                                 <button
                                     type='submit'
-                                    className="block w-full bg-green text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none"
+                                    className="block w-full bg-blue-800 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none"
                                 >
                                     {loading ? 'Wait...' : 'Sign In'}
                                 </button>

@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-
-=======
 import logo1 from '../../Assets/logo-no-background.png';
->>>>>>> 3c0f2e38e618176152917a77c81bcddac5d92271
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">

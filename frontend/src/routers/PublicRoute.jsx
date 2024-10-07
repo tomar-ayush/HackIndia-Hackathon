@@ -31,7 +31,7 @@ const PublicRoute = ({ children }) => {
 
     if (loading) return <div>Loading...</div>;
 
-    return isAuthenticated ? <Navigate to="/home" /> : children;
+    return isAuthenticated ? <Navigate to="/dashboard" /> : children;
 };
 
 export default PublicRoute;

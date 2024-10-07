@@ -45,18 +45,18 @@ function Signup() {
                 <h2 className="text-4xl tracking-tight text-white">
                     Sign Up into your account
                 </h2>
-                <span className="text-sm text-white">or <a href="/#" className="text-green-500">
+                <span className="text-sm text-white">or <a href="/#" className="text-blue-500">
                     Sign in into your account
                 </a>
                 </span>
             </div>
             <div className="flex justify-center my-2 mx-4 md:mx-0 ">
-                <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-neutral-900">
+                <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-gray-800">
                     <div className="flex flex-wrap -mx-3 mb-6 ">
                         <div className="w-full flex md:w-full px-3 mb-6 gap-10">
                             <div className='w-1/2'>
                                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Email'>Name</label>
-                                <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                                <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                     type="text"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
@@ -65,7 +65,7 @@ function Signup() {
                             </div>
                             <div className='w-1/2'>
                                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Password'>OTP</label>
-                                <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                                <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                     type="text"
                                     value={otp}
                                     onChange={(e) => setOtp(e.target.value)}
@@ -75,7 +75,7 @@ function Signup() {
                         </div>
                         <div className="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Email'>Email address</label>
-                            <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                            <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +85,7 @@ function Signup() {
 
                         <div className="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Password'>Password</label>
-                            <input className="appearance-none block w-full bg-neutral-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                            <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -103,7 +103,7 @@ function Signup() {
                             </div>
                         </div>
                         <div className="w-full md:w-full px-3">
-                            <button onClick={handleSignup} type='submit' className="block w-full bg-green text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none ">{loading ? 'wait...' : 'Sign Up'}</button>
+                            <button onClick={handleSignup} type='submit' className="block w-full bg-blue-800 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green focus:outline-none ">{loading ? 'wait...' : 'Sign Up'}</button>
                         </div>
                         <div className='pt-8 mx-auto font-thin text-xl -mb-5'>
                             {message && <p style={{ color: messageColor }} >{message}</p>}
