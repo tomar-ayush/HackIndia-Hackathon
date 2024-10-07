@@ -1,3 +1,4 @@
+import Features from "./Features";
 import Navbar from "./Navbar";
 
 const Hero = () => {
@@ -228,6 +229,7 @@ const Hero = () => {
                     </svg>
                 </div>
             </section>
+                <Features/>
         </>
     );
 };
