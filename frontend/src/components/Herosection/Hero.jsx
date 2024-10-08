@@ -30,7 +30,7 @@ const Hero = () => {
                       type="email"
                       id="Email"
                       name="Email"
-                      placeholder="Enter Token"
+                      placeholder="Enter Address"
                       autocomplete="off"
                       class="h-12 max-w-[250px] px-4 text-white text-sm border border-[#1d4ed8] bg-transparent rounded-l-md focus:outline-none focus:border-[#3898EC]"
                     />

@@ -130,47 +130,33 @@ const SideBar = () => {
             </li>
           </Link>
 
-          <li
-            className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-lg items-center gap-x-4 mt-2`}
-          >
-            <button className="flex gap-3" onClick={handleLogout}>
-              <TbLogout style={{ width: "30px", height: "30px" }} />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
-                Logout
-              </span>
-            </button>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <div
-          className={`absolute bottom-5 pl-5 flex items-center space-x-4 text-white`}
-        >
-          <img
-            className="w-12 h-12 rounded-full"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-            alt="Jese Leos avatar"
-          />
-          <div>
-            <div
-              className={`font-medium ${
-                !open ? "hidden" : "block"
-              } origin-left duration-200`}
-            >
-              {name ? name : "No name Found"}
+                    <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-lg items-center gap-x-4 mt-2`}>
+                        <button className='flex gap-3' ><TbLogout style={{ width: '30px', height: '30px' }} />
+                            <span className={`${!open && 'hidden'} origin-left duration-200`}>Logout</span></button>
+                    </li>
+                </ul>
             </div>
-            <div
-              className={`font-medium ${
-                !open ? "hidden" : "block"
-              } origin-left text-gray-600 duration-200 truncate w-[230px]`}
-            >
-              {email ? email : "No Email Found"}
+            <div >
+                
+                    <div className={`absolute bottom-5 pl-5 flex items-center space-x-4 text-white`} >
+
+                        <img className="w-12 h-12 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar" />
+                        <div>
+                            <div className={`font-medium ${!open ? 'hidden' : 'block'} origin-left duration-200`}>
+                                
+                                {name ? name : 'No name Found'}
+                            </div>
+                            <div
+                                className={`font-medium ${!open ? 'hidden' : 'block'} origin-left text-gray-600 duration-200 truncate w-[230px]`}
+                            >
+                                {email ? email : 'No Email Found'}
+                            </div>
+
+                        </div>
+                    </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default SideBar;
