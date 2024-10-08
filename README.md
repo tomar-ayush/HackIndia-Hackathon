@@ -1,8 +1,9 @@
 
 LegitEx
-A brief description of what this project does and who it's for
 
-LegitEx Overview LegitEx is a decentralized platform designed to seamlessly connect professionals (e.g., doctors, legal advisors) with clients seeking expert advice. It enables professionals to offer their services and advice through verified digital credentials, ensuring authenticity and trust. The platform utilizes Ethereum blockchain technology to create and manage web3 tokens for professionals’ documents, making it easier for clients to verify the authenticity of the professionals they engage with.
+
+LegitEx Overview 
+LegitEx is a decentralized platform designed to seamlessly connect professionals (e.g., doctors, legal advisors) with clients seeking expert advice. It enables professionals to offer their services and advice through verified digital credentials, ensuring authenticity and trust. The platform utilizes Ethereum blockchain technology to create and manage web3 tokens for professionals’ documents, making it easier for clients to verify the authenticity of the professionals they engage with.
 
 Key Features:
 
