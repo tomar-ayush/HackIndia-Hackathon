@@ -100,7 +100,7 @@ const SideBar = () => {
                     </Link>
 
                     <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-lg items-center gap-x-4 mt-2`}>
-                        <button className='flex gap-3' ><TbLogout style={{ width: '30px', height: '30px' }} />
+                        <button onClick={handleLogout} className='flex gap-3' ><TbLogout style={{ width: '30px', height: '30px' }} />
                             <span className={`${!open && 'hidden'} origin-left duration-200`}>Logout</span></button>
                     </li>
                 </ul>
