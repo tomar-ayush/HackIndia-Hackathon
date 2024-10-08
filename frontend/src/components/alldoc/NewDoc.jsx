@@ -45,12 +45,12 @@ function NewDoc() {
 
       </div>
       <div className="flex justify-center my-2 mx-4 md:mx-0 ">
-        <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-gray-700">
+        <div className="w-full max-w-md rounded-lg shadow-md p-6 bg-gray-800">
           <div className="flex flex-wrap -mx-3 mb-6 ">
             <div className="w-full flex md:w-full px-3 mb-6 gap-10">
               <div className='w-1/2'>
                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Email'>Name</label>
-                <input className="appearance-none block w-full bg-gray-900 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -59,7 +59,7 @@ function NewDoc() {
               </div>
               <div className='w-1/2'>
                 <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='Profession'>Profession</label>
-                <input className="appearance-none block w-full bg-gray-900 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+                <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                   type="text"
                   value={professionals}
                   onChange={(e) => setProfession(e.target.value)}
@@ -69,7 +69,7 @@ function NewDoc() {
             </div>
             <div className="w-full md:w-full px-3 mb-6">
               <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='document name'>document name</label>
-              <input className="appearance-none block w-full bg-gray-900 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+              <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                 type="email"
                 value={docname}
                 onChange={(e) => setDocname(e.target.value)}
@@ -79,7 +79,7 @@ function NewDoc() {
 
             <div className="w-full md:w-full px-3 mb-6">
               <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='description'>description</label>
-              <input className="appearance-none block w-full bg-gray-900 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
+              <input className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"
                 type="password"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -89,7 +89,7 @@ function NewDoc() {
 
             <div className="w-full md:w-full px-3 mb-6">
               <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor='description'>Upload document</label>
-              <input  className="appearance-none block w-full bg-gray-900 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"  type="file" name="" id="" />
+              <input  className="appearance-none block w-full bg-gray-950 text-white font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none"  type="file" name="" id="" />
             </div>
 
             <div className="w-full md:w-full px-3  ">
